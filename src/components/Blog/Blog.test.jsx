@@ -7,7 +7,13 @@ describe("Blog component", () => {
     const { debug, getByText, findByText } = render(<Blog />);
 
     debug();
+
     getByText('Posts');
-    await findByText('News 2');
+    // expect(getByText('Posts')).toBeInTheDocument();
+
+    // await findByText('News 2');
+    await findByText('Błąd pobierania');
+
+    debug();
   })
 });

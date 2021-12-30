@@ -15,30 +15,30 @@ export const handlers = [
   }),
 
   // TODO: move to config
-  rest.get('https://api.airtable.com/v0/appZ3Ko6K42jAMR0H/news?view=default', (_req, res, ctx) => {
+  rest.get('https://api.airtable.com/v0/appZ3Ko6K42jAMR0H/news', (_req, res, ctx) => {
     return res(
-      ctx.status(200),
-      ctx.json({
-        records: [{
-          id: 1,
-          fields: {
-            title: "News 1",
-            intro: "Intro 1"
-          }
-        }, {
-          id: 2,
-          fields: {
-            title: "News 2",
-            intro: "Intro 2"
-          }
-        }, {
-          id: 3,
-          fields: {
-            title: "News 3",
-            intro: "Intro 3"
-          }
-        }]
-      }),
+      ctx.status(401),
+      // ctx.json({
+      //   records: [{
+      //     id: 1,
+      //     fields: {
+      //       title: "News 1",
+      //       intro: "Intro 1"
+      //     }
+      //   }, {
+      //     id: 2,
+      //     fields: {
+      //       title: "News 2",
+      //       intro: "Intro 2"
+      //     }
+      //   }, {
+      //     id: 3,
+      //     fields: {
+      //       title: "News 3",
+      //       intro: "Intro 3"
+      //     }
+      //   }]
+      // }),
     )
   })
 ]
